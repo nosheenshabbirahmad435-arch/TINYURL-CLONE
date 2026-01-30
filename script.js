@@ -1,0 +1,87 @@
+// script.js file ka content:
+
+document.addEventListener("DOMContentLoaded", function() {
+    const featureBoxes = document.querySelectorAll('.point-box');
+    const featureImages = document.querySelectorAll('.mockup-img');
+    let currentIdx = 0;
+    let autoPlay;
+
+    // Function jo image aur highlight ko update karega
+    function updateDisplay(index) {
+        // Pehle sab boxes se grey background aur images se visibility khatam karo
+        featureBoxes.forEach(box => box.classList.remove('active-feature'));
+        featureImages.forEach(img => img.classList.remove('active'));
+
+        // Ab jo index pass hua hai usko active karo
+        if(featureBoxes[index]) {
+            featureBoxes[index].classList.add('active-feature');
+        }
+        if(featureImages[index]) {
+            featureImages[index].classList.add('active');
+        }
+        
+        currentIdx = index;
+    }
+
+    // Automatic chalne wala function (3 seconds ka gap)
+    function startRotation() {
+        autoPlay = setInterval(() => {
+            let next = (currentIdx + 1) % featureBoxes.length;
+            updateDisplay(next);
+        }, 3000);
+    }
+
+    // Har box par mouse le jane ka effect
+    featureBoxes.forEach((box, i) => {
+        box.addEventListener('mouseenter', () => {
+            clearInterval(autoPlay); // Jab mouse upar ho to automatic ruk jaye
+            updateDisplay(i);        // Wahi image dikhaye jidher mouse hai
+        });
+
+        box.addEventListener('mouseleave', () => {
+            startRotation();         // Mouse hatne par dobara auto shuru ho jaye
+        });
+    });
+
+    // Pehli baar rotation shuru karne ke liye
+    startRotation();
+
+
+});
+
+
+
+function initLiveTinyCounter() {
+    const counterEl = document.getElementById('live-tiny-counter');
+    if (!counterEl) return;
+
+    let baseCount = 30606131800;
+
+    setInterval(() => {
+        // Har adhay second mein 2-8 numbers barhenge
+        let increment = Math.floor(Math.random() * 7) + 2;
+        baseCount += increment;
+        
+        // Format with commas
+        counterEl.innerText = baseCount.toLocaleString();
+    }, 800);
+}
+
+// Start once page loads
+document.addEventListener('DOMContentLoaded', initLiveTinyCounter);
+
+
+
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        
+        // Agar pehle se koi khula hai toh usay band karein (Optional)
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) item.classList.remove('active');
+        });
+
+        // Current item ko toggle karein
+        faqItem.classList.toggle('active');
+    });
+});

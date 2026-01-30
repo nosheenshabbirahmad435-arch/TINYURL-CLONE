@@ -1,0 +1,1565 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif; 
+} 
+/* BODY */
+body {
+  background: #002342;
+  color: white;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  background: #054563;
+  height: 70px;
+  padding: 0 60px;
+  display: flex; /* element ko row ya colloumn men easily align karnay ke liye use hota ha layout&alignment */
+  justify-content: space-between; /* element center right left larnay le liye */
+  align-items: center;/* element ko uper nichay ya beech men rakhnay ke liye */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;/* tab kaam karta ha jb position relative,fixed,absolute ya sticky ho */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-left a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.header-right a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.signup {
+  background: #0B6684;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 60px 60px;
+}
+/* LEFT */
+.left {
+  width: 55%;
+}
+.left h1 {
+  font-size: 44px;
+  line-height: 1.2;
+}
+.left p {
+  margin: 20px 0;
+  color: #e0e0e0;
+  max-width: 500px;
+}
+.actions button {
+  padding: 10px 18px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.primary {
+  background: #0B6684;
+  color: white;
+}
+.secondary {
+  background: white;
+  color: #054563;
+}
+/* RIGHT */
+.right {
+  width: 420px;
+}
+/* SHORTENER BOX */
+.shortener-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+/* TABS */
+.tabs {
+  display: flex;
+}
+.tab {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tab.active {
+  background: white;
+  color: #111;
+}
+
+.tab.qr {
+  background: #2c8eb5;
+  color: white;
+}
+
+/* CONTENT */
+.content {
+  padding: 22px;
+  color: black;
+}
+
+/* LABEL WITH ICON */
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label i {
+  font-size: 13px;
+  color: #555;
+}
+
+.label span {
+  color: red;
+}
+
+/* INPUT WITH ICON (ONLY LONG URL) */
+.input-icon {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+}
+
+/* DOMAIN & ALIAS (NO ICON INSIDE INPUT) */
+.field select,
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.field {
+  flex: 1;
+}
+
+.slash {
+  font-size: 22px;
+  margin-top: 32px;
+  color: #666;
+}
+
+small {
+  font-size: 11px;
+  color: #666;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  background: #449d44;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 14px;
+  font-size: 11px;
+  color: #777;
+  font-style: italic;
+}
+
+.footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+ 
+/* --- FULL WIDTH STRIP STYLE --- */
+
+.recent-links-section {
+  margin-top: 40px; 
+  /* Width ko itna barha diya ke ye screen ke end tak jaye */
+  width: 180%; 
+  max-width: 1200px; 
+  position: relative;
+  left: 0;
+}
+
+.recent-links-section h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.recent-links-box {
+  background-color: white;
+  /* Lambai (Height) ko kam rakha hai taake patli strip rahe */
+  padding: 10px 20px; 
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recent-links-box i {
+  color: #333;
+  font-size: 16px;
+}
+
+.recent-links-box span {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* --- NEW PLANS SECTION STYLING --- */
+
+.plans-include {
+  background-color: #f4f6f8; /* Light grey/white background jaisa pic mein hai */
+  padding: 80px 60px;
+  color: #333;
+  text-align: center;
+}
+
+.plans-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plans-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.plans-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.plan-item {
+  flex: 1;
+}
+
+.plan-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.plan-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+  min-height: 80px; /* Text ko align rakhne ke liye */
+}
+/* --- ye ha  PLANS SECTION STYLING WITH ZOOM EFFECT --- */
+
+.plans-include {
+  background-color: #f4f6f8;
+  padding: 80px 60px;
+  color: #333;
+  text-align: center;
+}
+
+.plans-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.plan-item {
+  flex: 1;
+}
+
+/* Container taake image zoom hote waqt box se bahar na nikle */
+/* --- OUTCLASS IMAGE LOOK --- */
+
+.img-container {
+  width: 100%;
+  height: 160px;        /* Height kam kar di taake image decent lage */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 15px;
+  background-color: #fff; /* White background taake image saaf dikhe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;        /* Image aur border ke beech gap */
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Soft shadow for premium look */
+}
+.plan-item img {
+  max-width: 90%;       /* Image ko container se thoda chota rakha */
+  max-height: 90%;
+  width: auto;          /* Image stretch nahi hogi */
+  height: auto;
+  object-fit: contain;  /* Image poori dikhegi, kategi nahi */
+  transition: all 0.4s ease-in-out;
+}
+/* /* /* /* MOUSE HOVER EFFECT */
+.plan-item:hover img {
+  transform: scale(1.08) translateY(-3px); /* Image zoom hogi aur thoda upar move hogi */
+} 
+
+.plan-item:hover .img-container{
+  border-color: #1fa2ff;
+  box-shadow: 0 8px 20px rgba(31,162,255,0.15);
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+  .plans-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan-item {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* --- VIDEO FEATURE SECTION --- */
+
+.video-feature {
+  background-color: #2c8eb5; /* Blue background as seen in image */
+  padding: 80px 60px;
+  color: white;
+}
+
+.video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Video Styling */
+ .video-left {
+  flex: 1;
+}
+
+.video-left video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+} 
+
+/* Text Styling */
+.video-right {
+  flex: 1;
+}
+
+.video-right h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.video-right p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Buttons Styling */
+.video-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-white {
+  background: white;
+  color: #2c8eb5;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-white:hover {
+  background: #f0f0f0;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #2c8eb5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .video-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .video-actions {
+    justify-content: center;
+  }
+} 
+
+
+/* --- VIDEO FEATURE SECTION (FIXED LOOK) --- */
+
+.video-feature {
+  background-color: #f4f6f8; /* Background color wahi ha jo plans section ka ha */
+  padding: 80px 60px;
+}
+
+.video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch; /* Is se video aur blue box ki height ek jaisi ho jayegi */
+  border-radius: 15px;
+  overflow: hidden; 
+  background: white;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* LEFT SIDE: VIDEO */
+.video-left {
+  flex: 1.2; 
+  background: #000; /* Video load hone se pehle black dikhega */
+}
+
+.video-left video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Video poore area ko fill karegi stretch hue baghair */
+  display: block;
+}
+
+/* RIGHT SIDE: BLUE TEXT BOX */
+.video-right {
+  flex: 1;
+  background-color: #2c8eb5; /* Blue background sirf text area mein ha */
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-right h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.video-right p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.video-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-white {
+  background: white;
+  color: #2c8eb5;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-white:hover {
+  background: #e0e0e0;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #2c8eb5;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 950px) {
+  .video-container {
+    flex-direction: column;
+  }
+  .video-left, .video-right {
+    flex: none;
+    width: 100%;
+  }
+  .video-right {
+    padding: 30px;
+    text-align: center;
+  }
+  .video-actions {
+    justify-content: center;
+  }
+}
+
+
+
+/* --- SPLIT VIDEO SECTION STYLING --- */
+
+.video-feature-split {
+  width: 100%;
+  overflow: hidden;
+}
+
+.split-container {
+  display: flex;
+  min-height: 500px; /* Is se height control hogi */
+  width: 100%;
+}
+
+/* Left side poori image/video cover karega */
+.split-left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.full-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Is se video stretch nahi hogi aur poori cover karegi */
+  display: block;
+}
+
+/* Right side blue background aur centered text */
+.split-right {
+  flex: 1;
+  background-color: #2c8eb5; /* Main Blue Color */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+  color: white;
+}
+
+.content-wrapper {
+  max-width: 500px; /* Text ko ek limit mein rakhne ke liye */
+}
+
+.content-wrapper h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.content-wrapper p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+/* BUTTONS STYLING */
+.video-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-white {
+  background: white;
+  color: #2c8eb5;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-sales {
+  background-color: #212529; /* Aapka bataya hua Dark Gray/Black color */
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-sales:hover {
+  background-color: #000000;
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 900px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .split-left {
+    height: 300px;
+  }
+  .split-right {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .video-actions {
+    justify-content: center;
+  }
+}
+
+
+
+ 
+
+/* 1. Purani saari video aur split waali CSS delete karke ye ek baar lagayein */
+.video-feature-split {
+  width: 100%;
+  background-color: #f4f6f8; 
+  padding: 0; 
+}
+
+.split-container {
+  display: flex;
+  min-height: 550px; 
+  width: 100%;
+  align-items: stretch; /* Is se blue box aur video ki height barabar rahay gi */
+}
+
+/* LEFT SIDE: Full Video Area */
+.split-left {
+  flex: 1.2; 
+  background: #000;
+  overflow: hidden;
+}
+
+.full-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+/* RIGHT SIDE: Blue Content Box */
+.split-right {
+  flex: 1;
+  background-color: #2c8eb5; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  color: white;
+}
+
+.content-wrapper {
+  max-width: 450px;
+}
+
+.content-wrapper h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.content-wrapper p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+/* --- BUTTONS STYLING --- */
+.video-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* View Plans Button (Text color #212529) */
+.btn-white {
+  background: white;
+  color: #212529 !important; /* Forcefully applying your color */
+  border: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+/* Contact Sales Button (Body color #212529) */
+.btn-sales {
+  background-color: #212529 !important; 
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.btn-sales:hover {
+  background-color: #000000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .split-left {
+    height: 300px;
+  }
+  .split-right {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .video-actions {
+    justify-content: center;
+  }
+}
+
+/* --- CTA SECTION STYLING --- */
+
+.cta-section {
+  background-color: #f4f6f8; /* Light grey background as seen in screenshot */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  color: #212529; /* Dark heading color */
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.cta-container p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  white-space: nowrap;
+}
+
+/* Button Styling matching the screenshot */
+.btn-view-plans {
+  background-color: #054563; /* Darker blue color from image */
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-view-plans:hover {
+  background-color: #04354d;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .cta-container h2 {
+    font-size: 24px;
+  }
+  .cta-container p {
+    white-space: normal;
+    /* font-size: 16px; */
+  }
+}
+
+/* --- DYNAMIC FEATURES STYLING --- */
+
+.dynamic-features {
+  background-color: #f4f6f8;
+  padding: 40px 60px 80px 60px;
+}
+
+.features-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.features-flex {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.side-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Space between text points */
+}
+
+.point-box h3 {
+  color: #212529;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.point-box p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* CENTER IMAGE SLIDER */
+.center-col {
+  flex: 1.5; /* Center part thoda bada rakha hai */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px; /* Adjust as needed */
+}
+
+.mockup-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mockup-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 95%;
+  max-height: 95%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.mockup-img.active {
+  opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 1000px) {
+  .features-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .center-col {
+    order: -1; /* Image mobile par pehle aaye */
+    height: 350px;
+  }
+}
+
+
+
+
+/* --- SIX COLUMN SECTION STYLE --- */
+.dynamic-features {
+  background-color: #f4f6f8;
+  padding: 80px 40px;
+}
+
+.features-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Har side ke 3 columns ki styling */
+.side-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Feature Box (Hover effect jaisa pic mein hai) */
+.point-box {
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Mouse hover par grey background */
+.point-box:hover, .point-box.active-feature {
+  background-color: #e9ecef; /* Grey color from your image */
+}
+
+.point-box h3 {
+  color: #212529;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.point-box p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Center Image Styling */
+.center-graphic-col {
+  flex: 1.5;
+  height: 500px;
+  position: relative;
+}
+
+.mockup-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.mockup-img.active {
+  opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1100px) {
+  .features-flex {
+    flex-direction: column;
+  }
+  .side-group {
+    width: 100%;
+  }
+}
+
+/* --- VIDEO ANALYTICS FLEX SECTION --- */
+.video-analytics-flex {
+  background-color: #ffffff; /* Contrast ke liye white rakha hai */
+  padding: 80px 60px;
+  margin-top: 20px; /* Minor distance from previous section */
+}
+
+.analytics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analytics-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Video Styling */
+.analytics-video {
+  flex: 1.2;
+}
+
+.analytics-video video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.analytics-text {
+  flex: 1;
+}
+
+.analytics-text h2 {
+  color: #212529;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.analytics-text p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.analytics-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.analytics-features li {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.analytics-features li i {
+  color: #1fa2ff; /* Blue check icons */
+}
+
+/* Button Styling */
+.btn-analytics {
+  background-color: #1fa2ff;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-analytics:hover {
+  background-color: #0d8be0;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .analytics-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .analytics-features li {
+    justify-content: center;
+  }
+}
+
+
+
+
+/* --- STATS & VIDEO SECTION STYLE --- */
+.stats-video-section {
+  background-color: #002342; /* Dark Blue as requested */
+  padding: 100px 60px;
+  color: white;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.stats-content {
+  flex: 1;
+}
+
+.counter-number {
+  font-size: 64px;
+  font-weight: 800;
+  color: #1fa2ff; /* Highlight color */
+  margin-bottom: 5px;
+}
+
+.counter-label {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.stats-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: #ccd6f6;
+}
+
+.stats-btn {
+  background-color: #1fa2ff;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.stats-btn:hover {
+  background-color: #0d8be0;
+  transform: translateY(-3px);
+}
+
+
+
+
+/* --- FULL WIDTH SPLIT SECTION --- */
+.final-stats-video-split {
+  width: 100%;
+  background-color: #002342; /* Background color */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.stats-full-flex {
+  display: flex;
+  min-height: 600px; /* Aap apni marzi se height set kar sakte hain */
+  width: 100%;
+}
+
+/* LEFT BLUE BOX */
+.stats-left-box {
+  flex: 1;
+  background-color: #002342; /* Exact Navy Blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  color: white;
+}
+
+.stats-content-inner {
+  max-width: 500px;
+}
+
+.stats-content-inner h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+ .stats-content-inner p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 50px;
+} 
+ 
+Stats Row Layout */
+ .data-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+} 
+
+
+
+
+
+/* --- OVERLAP FIX & SPLIT LOOK --- */
+.final-stats-video-split {
+  width: 100%;
+  background-color: #002342;
+  overflow: hidden;
+}
+
+.stats-full-flex {
+  display: flex;
+  min-height: 550px;
+  width: 100%;
+}
+
+.stats-left-box {
+  flex: 1;
+  background-color: #002342;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  color: white;
+}
+
+.stats-content-inner {
+  max-width: 550px;
+}
+
+/* Row Styling taake number aur text alag rahein */
+.stat-row {
+  display: flex;
+  align-items: baseline; /* Niche se barabar rakhne ke liye */
+  gap: 20px;            /* Number aur text ke beech ka fasla */
+  margin-bottom: 25px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 800;
+  min-width: 280px;      /* YE SABSE ZAROORI HAI: Counter ko apni jagah dega */
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.stat-text {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.stats-right-video {
+  flex: 1;
+}
+
+.video-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 950px) {
+  .stats-full-flex { flex-direction: column; }
+  .stat-row { flex-direction: column; gap: 5px; }
+  .stat-number { min-width: auto; }
+}
+
+
+/* --- FAQ SECTION STYLING --- */
+.faq-section {
+  background-color: #f4f6f8; /* Light background */
+  padding: 100px 60px;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+}
+
+.faq-left {
+  flex: 1;
+}
+
+.faq-left h2 {
+  color: #212529;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 300px;
+}
+
+.faq-right {
+  flex: 2;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #212529;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.faq-question i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Jab open ho toh icon rotate ho jaye */
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+  padding-bottom: 25px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Answer show karne ke liye */
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .faq-container { flex-direction: column; }
+  .faq-left h2 { font-size: 32px; max-width: 100%; text-align: center; }
+}
+.ready-links-cta {
+    background-color: #002342; /* Dark blue background 🟦 */
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-inner-container {
+    max-width: 800px; /* Content ki width ko control karne ke liye 📏 */
+}
+
+.cta-inner-container h2 {
+    color: #FFFFFF; /* White heading ⚪ */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-inner-container p {
+    color: #FFFFFF; /* Paragraph color bilkul heading jaisa white ⚪ */
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+/* --- FINAL READY LINKS CTA SECTION --- */
+.ready-links-cta {
+    background-color: #002342; /* Dark blue background 🟦 */
+    padding: 100px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-inner-container {
+    max-width: 1200px; /* Container ko itna bada rakha hai ke text line mein aa sake 📏 */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Heading, Para aur Buttons ko center karne ke liye 🎯 */
+    text-align: center;
+}
+
+.cta-inner-container h2 {
+    color: #FFFFFF; /* White heading ⚪ */
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.cta-inner-container p {
+    color: #FFFFFF; /* Paragraph color bilkul heading jaisa white ⚪ */
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1000px; /* Text ko ek hi line mein rakhne ki koshish ke liye ↔️ */
+}
+
+/* --- BUTTONS STYLING --- */
+.cta-button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Mobile par buttons ko niche lane ke liye 📱 */
+}
+
+/* View Plans Button */
+.btn-plans {
+    background-color: #DEE2E6 !important; /* Button body color 🔘 */
+    color: #000000 !important; /* Text color black ⚫ */
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+/* Create Free Account Button */
+.btn-account {
+    background-color: #033351 !important; /* Button body color 🟦 */
+    color: #FFFFFF !important; /* Text color white ⚪ */
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+/* Hover effects for better look */
+.btn-plans:hover { background-color: #ced4da !important; }
+.btn-account:hover { background-color: #02253a !important; }
+.main-footer {
+    background-color: #033351; /* Dark Blue 🟦 */
+    color: #FFFFFF;
+    padding: 80px 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Right Section Alignment */
+.right-align {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-left: 15px;
+    opacity: 1;
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
